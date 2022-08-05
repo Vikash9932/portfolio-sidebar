@@ -1,23 +1,6 @@
 import React from 'react';
-import {
-  Drawer,
-  DrawerBody,
-  DrawerHeader,
-  DrawerOverlay,
-  DrawerContent,
-  DrawerCloseButton,
-  Button,
-  useDisclosure,
-  Input,
-  Box,
-  Text,
-  Image,
-  Center,
-  Link,
-  Flex,
-} from '@chakra-ui/react';
-import { Link as RLink } from 'react-router-dom';
-import { HamburgerIcon } from '@chakra-ui/icons';
+
+import { Link } from 'react-router-dom';
 import {
   AiOutlineHome,
   AiOutlineMail,
@@ -31,108 +14,92 @@ import { BsCloudDownload } from 'react-icons/bs';
 import './Sidebar.css';
 import Me from '../../assets/me.jpg';
 import CV from '../../assets/cv.pdf';
-
-function DrawerExample() {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const btnRef = React.useRef();
-
-  return (
-    <>
-      <Button ref={btnRef} colorScheme='teal' onClick={onOpen}>
-        <HamburgerIcon />
-      </Button>
-
-      <Drawer
-        isOpen={isOpen}
-        placement='left'
-        onClose={onClose}
-        finalFocusRef={btnRef}>
-        <DrawerOverlay />
-        <DrawerContent backgroundColor='lightgray'>
-          <DrawerCloseButton />
-          <DrawerHeader>
-            <Center>
-              {/* Image is here */}
-              <Image
-                src={Me}
-                alt='My image'
-                boxSize='150px'
-                borderRadius='full'
-                border='8px solid #BBB'
-                filter='grayscale(100%)'
-              />
-            </Center>
-
-            <Center>
-              {/* My Name is here */}
-              <Text fontSize='3xl' fontWeight='bolder'>
-                Vikash Kumar
-              </Text>
-            </Center>
-
-            <Flex justifyContent='space-evenly' marginTop='5px'>
-              {/* Icons */}
-              <Link
-                href='https://github.com/vikash9932'
-                target='_blank'
-                rel='noreferrer'>
-                <AiOutlineGithub size='25' />
-              </Link>
-              <Link
-                href='https://www.linkedin.com/in/vikash-kumar-729702103'
-                target='_blank'
-                rel='noreferrer'>
-                <AiOutlineLinkedin size='25' />
-              </Link>
-              <Link
-                href={CV}
-                download
-                // borderRadius='full'
-                // border='8px solid #678780'
-                // backgroundColor='#678780'
-                // color='white'
-              >
-                <BsCloudDownload size='25' />
-              </Link>
-            </Flex>
-          </DrawerHeader>
-
-          <DrawerBody>
-            <Flex flexDirection='column'>
-              <RLink to='/' onClick={onClose}>
-                <AiOutlineHome size='25' />
-                Home
-              </RLink>
-              <RLink to='/about' onClick={onClose}>
-                <CgProfile size='25' />
-                About
-              </RLink>
-              <RLink to='/contact' onClick={onClose}>
-                <AiOutlineMail size='25' />
-                Contact
-              </RLink>
-              <RLink to='/projects' onClick={onClose}>
-                <MdOutlineWeb size='25' />
-                Projects
-              </RLink>
-              <RLink to='/resume' onClick={onClose}>
-                <MdWorkOutline size='25' />
-                Resume
-              </RLink>
-            </Flex>
-          </DrawerBody>
-        </DrawerContent>
-      </Drawer>
-    </>
-  );
-}
+import ContextFile from '../../context';
 
 const Sidebar = () => {
+  const [path, setPath] = React.useContext(ContextFile);
+  console.log('path inside sidebar', path);
+
+  const [styleSelect, setStyleSelect] = React.useState('');
   return (
-    <div>
-      Sidebar
-      <DrawerExample />
-    </div>
+    <>
+      <div className='sidebar'>
+        <div className='sidebar--image'>
+          <img src={Me} alt='Me' />
+        </div>
+        <div className='sidebar--name'>Vikash Kumar</div>
+        <div className='sidebar--social'>
+          <a
+            href='https://github.com/vikash9932'
+            target='_blank'
+            rel='noreferrer'>
+            <AiOutlineGithub size='25' />
+          </a>
+          <a
+            href='https://www.linkedin.com/in/vikash-kumar-729702103'
+            target='_blank'
+            rel='noreferrer'>
+            <AiOutlineLinkedin size='25' />
+          </a>
+          <a href={CV} download>
+            <BsCloudDownload size='25' />
+          </a>
+        </div>
+        <div className='sidebar--nav'>
+          <Link
+            to='/'
+            className={path === '/' ? 'selectedRoute' : 'notSelectedRoute'}
+            onClick={() => setPath('/')}>
+            <div>
+              <AiOutlineHome size='25' />
+            </div>
+            <p>Home</p>
+          </Link>
+          <Link
+            to='/about'
+            className={path === '/about' ? 'selectedRoute' : 'notSelectedRoute'}
+            onClick={() => setPath('/about')}>
+            <div>
+              <CgProfile size='25' />
+            </div>
+            <p>About</p>
+          </Link>
+          <Link
+            to='/contact'
+            className={
+              path === '/contact' ? 'selectedRoute' : 'notSelectedRoute'
+            }
+            onClick={() => setPath('/contact')}>
+            <div>
+              <AiOutlineMail size='25' />
+            </div>
+            <p>Contact</p>
+          </Link>
+          <Link
+            to='/projects'
+            className={
+              path === '/projects' ? 'selectedRoute' : 'notSelectedRoute'
+            }
+            onClick={() => setPath('/projects')}>
+            <div>
+              <MdOutlineWeb size='25' />
+            </div>
+            <p>Projects</p>
+          </Link>
+          <Link
+            to='/resume'
+            className={
+              path === '/resume' ? 'selectedRoute' : 'notSelectedRoute'
+            }
+            onClick={() => setPath('/resume')}>
+            <div>
+              <MdWorkOutline size='25' />
+            </div>
+            <p>Resume</p>
+          </Link>
+        </div>
+      </div>
+    </>
   );
 };
 
