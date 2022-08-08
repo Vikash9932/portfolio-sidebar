@@ -18,9 +18,8 @@ import ContextFile from '../../context';
 
 const Sidebar = () => {
   const [path, setPath] = React.useContext(ContextFile);
-  console.log('path inside sidebar', path);
+  // console.log('path inside sidebar', path);
 
-  const [styleSelect, setStyleSelect] = React.useState('');
   return (
     <>
       <div className='sidebar'>

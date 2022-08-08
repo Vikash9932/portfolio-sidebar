@@ -11,9 +11,9 @@ import Contact from './pages/Contact/Contact';
 import ContextFile from './context';
 
 function App() {
-  const [path, setPath] = useState();
+  const [path, setPath] = useState('/');
   return (
-    <div>
+    <div className='app'>
       <ContextFile.Provider value={[path, setPath]}>
         <BrowserRouter>
           <Sidebar />
