@@ -18,11 +18,16 @@ const Home = () => {
   const [splitText, setSplitText] = useState(designation[0].split(''));
 
   useEffect(() => {
-    if (index <= word.length) {
+    if (index < word.length) {
       setTimeout(() => {
         setText(text + splitText[index]);
         setIndex(index + 1);
       }, 150);
+    } else if (index === word.length) {
+      setTimeout(() => {
+        setText(text + splitText[index]);
+        setIndex(index + 1);
+      }, 450);
     } else {
       if (masterIndex < designation.length) {
         setWord(designation[masterIndex]);
