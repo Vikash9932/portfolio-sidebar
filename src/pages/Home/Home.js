@@ -3,8 +3,7 @@ import './Home.css';
 
 const designation = [
   'Programmer',
-  'Web Developer',
-  'Front-End Developer',
+  'Front-End Web Developer',
   'React Developer',
   'Learner',
 ];
@@ -25,9 +24,14 @@ const Home = () => {
       }, 150);
     } else if (index === word.length) {
       setTimeout(() => {
-        setText(text + splitText[index]);
         setIndex(index + 1);
       }, 450);
+    } else if (index > word.length && index <= word.length * 2) {
+      setTimeout(() => {
+        setText(text.slice(0, -1));
+        console.log(text.slice(0, -1));
+        setIndex(index + 1);
+      }, 80);
     } else {
       if (masterIndex < designation.length) {
         setWord(designation[masterIndex]);
@@ -56,8 +60,8 @@ const Home = () => {
     <div className='home'>
       <div className='home--name'>Vikash Kumar</div>
       <div className='home--designation'>
-        I'm a <span>{text}</span>
-        <span>{cursor}</span>
+        I'm a <span className='home--text'>{text}</span>
+        <span className='home--cursor'>{cursor}</span>
       </div>
     </div>
   );
