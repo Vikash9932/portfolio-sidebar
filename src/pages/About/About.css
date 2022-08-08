@@ -1,0 +1,65 @@
+.about {
+  height: 100vh;
+  flex: 1 1;
+  margin: 1rem;
+}
+
+.about--heading {
+  padding: 2rem 0 3rem 0;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+.about--summary {
+  line-height: 1.4rem;
+}
+
+.about__skills {
+  /* padding-left: 20px;
+  padding-bottom: 20px; */
+}
+
+.about__skills__all {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about__skills__all__each {
+  width: 100%;
+  height: 1.2rem;
+  display: flex;
+  flex-direction: row;
+  background-color: lightgray;
+  margin-bottom: 1rem;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.about__skills__all__each__bar--heading {
+  font-weight: 500;
+  background-color: rgb(108, 225, 225);
+  flex: 2;
+  color: rgb(4, 87, 4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.about__skills__all__each__bar--progress {
+  flex: 7;
+}
+.about__skills__all__each__bar__progress--value {
+  background-color: rgb(25, 117, 117);
+  height: 100%;
+}
+
+.about__skills__all__each--progress {
+  flex: 1;
+  color: rgba(0, 0, 0, 0.294);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

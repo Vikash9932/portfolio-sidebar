@@ -29,7 +29,6 @@ const Home = () => {
     } else if (index > word.length && index <= word.length * 2) {
       setTimeout(() => {
         setText(text.slice(0, -1));
-        console.log(text.slice(0, -1));
         setIndex(index + 1);
       }, 80);
     } else {
