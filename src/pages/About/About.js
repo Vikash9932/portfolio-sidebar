@@ -21,7 +21,9 @@ const About = () => {
             <div className='about__skills__all__each__bar--progress'>
               <div
                 className='about__skills__all__each__bar__progress--value'
-                style={{ width: `${skill.progress}%` }}></div>
+                style={{ width: `${skill.progress}%` }}>
+                {skill.name}
+              </div>
             </div>
             <span className='about__skills__all__each--progress'>
               {skill.progress}%

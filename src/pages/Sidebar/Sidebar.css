@@ -1,6 +1,11 @@
 :root {
   --sidebar-color: lightgray;
 }
+
+.sidebar--logo {
+  display: none;
+}
+
 .sidebar {
   background-color: #2d8a7a;
   height: 100vh;
@@ -23,6 +28,13 @@
   padding: 20px;
 }
 
+.sidebar--cancel {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  cursor: pointer;
+  display: none;
+}
 .sidebar--name {
   text-align: center;
   font-weight: bolder;
@@ -74,4 +86,25 @@
 
 .notSelectedRoute {
   color: var(--sidebar-color);
+}
+
+@media screen and (max-width: 800px) {
+  /* .sidebar {
+    display: none;
+  } */
+
+  .show {
+    display: none;
+  }
+
+  .sidebar--logo {
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    cursor: pointer;
+  }
+  .sidebar--cancel {
+    display: block;
+  }
 }

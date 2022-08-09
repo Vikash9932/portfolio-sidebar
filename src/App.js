@@ -12,9 +12,10 @@ import ContextFile from './context';
 
 function App() {
   const [path, setPath] = useState('/');
+  const [icon, setIcon] = useState(true);
   return (
     <div className='app'>
-      <ContextFile.Provider value={[path, setPath]}>
+      <ContextFile.Provider value={{ path, setPath, icon, setIcon }}>
         <BrowserRouter>
           <Sidebar />
           <Routes>

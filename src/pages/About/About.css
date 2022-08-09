@@ -51,6 +51,8 @@
 .about__skills__all__each__bar__progress--value {
   background-color: rgb(25, 117, 117);
   height: 100%;
+  color: rgb(25, 117, 117);
+  user-select: none;
 }
 
 .about__skills__all__each--progress {
@@ -59,4 +61,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media screen and (max-width: 800px) {
+  .about {
+    margin: 3rem 1.5rem 0rem 1.5rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .about__skills__all__each__bar--heading {
+    display: none;
+  }
+  .about__skills__all__each__bar__progress--value {
+    color: rgb(219, 238, 238);
+  }
 }
