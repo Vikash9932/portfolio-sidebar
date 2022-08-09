@@ -9,6 +9,7 @@
   flex-direction: column;
   justify-content: center;
   padding-left: 1rem;
+  margin-left: 300px;
 }
 
 .home--name {

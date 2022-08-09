@@ -1,22 +1,18 @@
 .about {
-  height: 100vh;
+  /* height: 100vh; */
   flex: 1 1;
-  margin: 1rem;
+  margin: 1.5rem 1.5rem 0rem 320px;
 }
 
 .about--heading {
-  padding: 2rem 0 3rem 0;
+  padding: 0 0 2rem 0;
   font-size: 2rem;
   font-weight: bolder;
 }
 
 .about--summary {
   line-height: 1.4rem;
-}
-
-.about__skills {
-  /* padding-left: 20px;
-  padding-bottom: 20px; */
+  margin-bottom: 3rem;
 }
 
 .about__skills__all {
@@ -24,6 +20,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /* padding-bottom: 2rem; */
 }
 
 .about__skills__all__each {

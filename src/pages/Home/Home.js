@@ -21,7 +21,7 @@ const Home = () => {
       setTimeout(() => {
         setText(text + splitText[index]);
         setIndex(index + 1);
-      }, 150);
+      }, 100);
     } else if (index === word.length) {
       setTimeout(() => {
         setIndex(index + 1);
@@ -30,7 +30,7 @@ const Home = () => {
       setTimeout(() => {
         setText(text.slice(0, -1));
         setIndex(index + 1);
-      }, 80);
+      }, 30);
     } else {
       if (masterIndex < designation.length) {
         setWord(designation[masterIndex]);
