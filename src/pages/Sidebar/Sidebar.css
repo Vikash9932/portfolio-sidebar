@@ -13,6 +13,7 @@
   color: var(--sidebar-color);
   position: fixed;
   opacity: 1;
+  z-index: 999;
 }
 
 .sidebar--image img {

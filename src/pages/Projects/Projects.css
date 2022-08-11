@@ -17,6 +17,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+  cursor: pointer;
 }
 
 .projects__list--filterHeader1 {
