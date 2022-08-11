@@ -70,15 +70,7 @@ const SideBarContent = () => {
           </div>
           <p>About</p>
         </Link>
-        <Link
-          to='/contact'
-          className={path === '/contact' ? 'selectedRoute' : 'notSelectedRoute'}
-          onClick={() => setIcon(true)}>
-          <div>
-            <AiOutlineMail size='25' />
-          </div>
-          <p>Contact</p>
-        </Link>
+
         <Link
           to='/projects'
           className={
@@ -101,6 +93,15 @@ const SideBarContent = () => {
             <MdWorkOutline size='25' />
           </div>
           <p>Resume</p>
+        </Link>
+        <Link
+          to='/contact'
+          className={path === '/contact' ? 'selectedRoute' : 'notSelectedRoute'}
+          onClick={() => setIcon(true)}>
+          <div>
+            <AiOutlineMail size='25' />
+          </div>
+          <p>Contact</p>
         </Link>
       </div>
     </div>
