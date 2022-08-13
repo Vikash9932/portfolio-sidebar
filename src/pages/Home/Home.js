@@ -3,7 +3,7 @@ import './Home.css';
 
 const designation = [
   'Programmer',
-  'Front-End Web Developer',
+  'Front-End Web Dev',
   'React Developer',
   'Learner',
 ];

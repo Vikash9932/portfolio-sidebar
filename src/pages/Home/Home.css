@@ -32,4 +32,10 @@
   .home {
     margin-left: 0px;
   }
+  .home--name {
+    font-size: 3rem;
+  }
+  .home--designation {
+    font-size: 1.5rem;
+  }
 }
