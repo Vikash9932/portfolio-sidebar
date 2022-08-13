@@ -1,5 +1,4 @@
 .projects {
-  /* height: 100vh; */
   flex: 1 1;
   margin: 1.5rem 1.5rem 0rem 320px;
 }
@@ -8,9 +7,6 @@
   padding: 0 0 2rem 0;
   font-size: 2rem;
   font-weight: bolder;
-}
-
-.projects__list {
 }
 
 .projects__list--filterHeader {
@@ -45,7 +41,6 @@
 
 .projects__list--content {
   margin-top: 1.7rem;
-  /* border: 1px solid black; */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -65,8 +60,6 @@
 }
 .projects__list__content--item:hover .projects__list__content__item--links a {
   opacity: 1;
-}
-.projects__list__content__item--links {
 }
 .projects__list__content__item--links a {
   color: black;

@@ -49,6 +49,9 @@
   align-self: center;
   margin-left: 1rem;
 }
+.contact__details a {
+  color: blue;
+}
 @media screen and (max-width: 800px) {
   .contact {
     margin: 3rem 1.5rem 0rem 1.5rem;

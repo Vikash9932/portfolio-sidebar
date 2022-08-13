@@ -46,6 +46,7 @@ const Home = () => {
         setSplitText(designation[0].split(''));
       }
     }
+    //eslint-disable-next-line
   }, [index]);
 
   useEffect(() => {

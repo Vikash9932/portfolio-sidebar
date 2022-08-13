@@ -23,6 +23,7 @@ const SideBarContent = () => {
   // console.log('path inside sidebar', path, icon);
   useEffect(() => {
     setPath(location.pathname);
+    //eslint-disable-next-line
   }, [location]);
 
   return (
