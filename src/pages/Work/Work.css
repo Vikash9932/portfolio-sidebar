@@ -1,0 +1,17 @@
+.work {
+  /* height: 100vh; */
+  flex: 1 1;
+  margin: 1.5rem 1.5rem 0rem 320px;
+}
+
+.work--heading {
+  padding: 0 0 2rem 0;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+@media screen and (max-width: 800px) {
+  .work {
+    margin: 3rem 1.5rem 0rem 1.5rem;
+  }
+}

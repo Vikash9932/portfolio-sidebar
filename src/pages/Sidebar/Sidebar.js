@@ -84,16 +84,16 @@ const SideBarContent = () => {
           <p>Projects</p>
         </Link>
         <Link
-          to='/resume'
-          className={path === '/resume' ? 'selectedRoute' : 'notSelectedRoute'}
+          to='/work'
+          className={path === '/work' ? 'selectedRoute' : 'notSelectedRoute'}
           onClick={() => {
-            setPath('/resume');
+            setPath('/work');
             setIcon(true);
           }}>
           <div>
             <MdWorkOutline size='25' />
           </div>
-          <p>Resume</p>
+          <p>Work</p>
         </Link>
         <Link
           to='/contact'
