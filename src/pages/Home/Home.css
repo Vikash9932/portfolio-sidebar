@@ -21,12 +21,12 @@
   font-size: 2rem;
 }
 
-.home--text {
+/* .home--text {
   text-decoration-color: rgb(177, 192, 89);
   text-decoration-line: underline;
   text-decoration-style: wavy;
   text-underline-offset: 5px;
-}
+} */
 
 @media screen and (max-width: 800px) {
   .home {
