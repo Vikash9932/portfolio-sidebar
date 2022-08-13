@@ -2,6 +2,7 @@
   /* height: 100vh; */
   flex: 1 1;
   margin: 1.5rem 1.5rem 0rem 320px;
+  overflow-x: scroll;
 }
 
 .about--heading {
@@ -89,7 +90,7 @@
 
 .certifications__all__each--details {
   width: 90%;
-  /* overflow: scroll; */
+  overflow: scroll;
   word-wrap: break-word;
 }
 
