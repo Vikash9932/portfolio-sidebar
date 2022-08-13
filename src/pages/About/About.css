@@ -89,7 +89,7 @@
 
 .certifications__all__each--details {
   width: 90%;
-  overflow: scroll;
+  /* overflow: scroll; */
   word-wrap: break-word;
 }
 
@@ -124,6 +124,9 @@
   .about {
     margin: 3rem 1.5rem 0rem 1.5rem;
   }
+  .certifications__all {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -132,5 +135,8 @@
   }
   .about__skills__all__each__bar__progress--value {
     color: rgb(219, 238, 238);
+  }
+  .certifications__all {
+    width: 100%;
   }
 }
