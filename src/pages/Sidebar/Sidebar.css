@@ -78,11 +78,11 @@
 }
 
 .sidebar--nav a:hover {
-  color: rgb(77, 77, 214);
+  color: rgb(0, 0, 250);
 }
 
 .selectedRoute {
-  color: rgb(77, 77, 214);
+  color: rgb(0, 0, 250);
 }
 
 .notSelectedRoute {
