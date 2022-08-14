@@ -1,5 +1,7 @@
 .home {
-  background-image: url('https://images.unsplash.com/photo-1604430456280-43f652c497aa');
+  /* background-image: url('https://images.unsplash.com/photo-1604430456280-43f652c497aa'); */
+  /* background-image: url(../../assets/background.jpg); */
+  background-image: url('../../assets/bgDesktop.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   color: lightgray;
@@ -31,6 +33,7 @@
 @media screen and (max-width: 800px) {
   .home {
     margin-left: 0px;
+    background-image: url('../../assets/bgMobile.jpg');
   }
   .home--name {
     font-size: 3rem;
