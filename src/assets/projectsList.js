@@ -1,4 +1,4 @@
-import toDo from '../assets/toDoList.png';
+import toDo from '../assets/toDoList.jpg';
 import tetris from '../assets/tetrisGame.png';
 
 const projectsList = [
