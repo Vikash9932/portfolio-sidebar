@@ -27,12 +27,12 @@
 
 .work__company {
   font-size: 1.5rem;
-  width: 80%;
+  width: 60%;
 }
 
 .work__duration {
-  width: 20%;
-  text-align: right;
+  width: 40%;
+  text-align: left;
 }
 
 .work__designation {
@@ -50,11 +50,18 @@
 }
 
 .work__subHeading {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.1rem;
 }
 @media screen and (max-width: 800px) {
   .work {
     margin: 3rem 1.5rem 0rem 1.5rem;
+  }
+  .work__duration {
+    width: 40%;
+    text-align: right;
+  }
+  .work__points {
+    padding-inline-start: 20px;
   }
 }
