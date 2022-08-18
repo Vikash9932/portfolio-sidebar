@@ -1,5 +1,6 @@
 import toDo from '../assets/toDoList.jpg';
 import tetris from '../assets/tetrisGame.png';
+import meroPiso from '../assets/meroPiso.png';
 
 const projectsList = [
   {
@@ -17,6 +18,14 @@ const projectsList = [
     githubLink: 'https://github.com/Vikash9932/tetris-game',
     deployLink: 'https://tetris-game-two.vercel.app',
     techStack: ['JavaScript'],
+  },
+  {
+    id: 3,
+    name: 'Finance Tracker',
+    image: meroPiso,
+    githubLink: 'https://github.com/Vikash9932/finance-tracker',
+    deployLink: 'https://meropiso.web.app/',
+    techStack: ['React', 'Firebase'],
   },
 ];
 

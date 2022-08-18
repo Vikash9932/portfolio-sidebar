@@ -46,14 +46,15 @@
   flex-wrap: wrap;
 }
 .projects__list__content--item {
-  margin: 0 1rem 0.5rem 0;
-  width: 200px;
-  height: 220px;
+  border: 1px solid lightgray;
+  margin: 0 1.5rem 2rem 0;
+  width: 250px;
+  height: 270px;
   position: relative;
 }
 .projects__list__content__item--image {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
 }
 .projects__list__content--item:hover .projects__list__content__item--image {
   opacity: 0.2;
