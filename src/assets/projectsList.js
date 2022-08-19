@@ -7,8 +7,8 @@ const projectsList = [
     id: 1,
     name: 'To Do List',
     image: toDo,
-    githubLink: 'https://github.com/Vikash9932/todo-list-source',
-    deployLink: 'https://todo-lisst.herokuapp.com',
+    githubLink: 'https://github.com/Vikash9932/todo-list',
+    deployLink: 'https://todo-list-vikash9932.vercel.app',
     techStack: ['React', 'Redux'],
   },
   {
