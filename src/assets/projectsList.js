@@ -1,6 +1,7 @@
 import toDo from '../assets/toDoList.jpg';
 import tetris from '../assets/tetrisGame.png';
 import meroPiso from '../assets/meroPiso.png';
+import memoryGame from '../assets/memoryGame.png';
 
 const projectsList = [
   {
@@ -26,6 +27,14 @@ const projectsList = [
     githubLink: 'https://github.com/Vikash9932/finance-tracker',
     deployLink: 'https://meropiso.web.app/',
     techStack: ['React', 'Firebase'],
+  },
+  {
+    id: 4,
+    name: 'Memory Game',
+    image: memoryGame,
+    githubLink: 'https://github.com/Vikash9932/memory-game',
+    deployLink: 'https://memory-game-vikash9932.vercel.app',
+    techStack: ['React'],
   },
 ];
 
