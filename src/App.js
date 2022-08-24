@@ -1,14 +1,14 @@
-import React, { useState, lazy, Suspense } from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import ContextFile from './context';
+import Sidebar from './pages/Sidebar/Sidebar';
+import Home from './pages/Home/Home';
+import About from './pages/About/About';
+import Work from './pages/Work/Work';
+import Projects from './pages/Projects/Projects';
+import Contact from './pages/Contact/Contact';
 
-const Home = lazy(() => import('./pages/Home/Home'));
-const About = lazy(() => import('./pages/About/About'));
-const Work = lazy(() => import('./pages/Work/Work'));
-const Projects = lazy(() => import('./pages/Projects/Projects'));
-const Contact = lazy(() => import('./pages/Contact/Contact'));
-const Sidebar = lazy(() => import('./pages/Sidebar/Sidebar'));
+import ContextFile from './context';
 
 function App() {
   const [path, setPath] = useState('/');
@@ -17,16 +17,14 @@ function App() {
     <div className='app'>
       <ContextFile.Provider value={{ path, setPath, icon, setIcon }}>
         <BrowserRouter>
-          <Suspense fallback={<div>Loading...</div>}>
-            <Sidebar />
-            <Routes>
-              <Route exact path='/' element={<Home />} />
-              <Route path='/about' element={<About />} />
-              <Route path='/work' element={<Work />} />
-              <Route path='/projects' element={<Projects />} />
-              <Route path='/contact' element={<Contact />} />
-            </Routes>
-          </Suspense>
+          <Sidebar />
+          <Routes>
+            <Route exact path='/' element={<Home />} />
+            <Route path='/about' element={<About />} />
+            <Route path='/work' element={<Work />} />
+            <Route path='/projects' element={<Projects />} />
+            <Route path='/contact' element={<Contact />} />
+          </Routes>
         </BrowserRouter>
       </ContextFile.Provider>
     </div>
