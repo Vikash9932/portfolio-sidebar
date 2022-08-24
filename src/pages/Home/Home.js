@@ -25,12 +25,12 @@ const Home = () => {
     } else if (index === word.length) {
       setTimeout(() => {
         setIndex(index + 1);
-      }, 450);
+      }, 550);
     } else if (index > word.length && index <= word.length * 2) {
       setTimeout(() => {
         setText(text.slice(0, -1));
         setIndex(index + 1);
-      }, 30);
+      }, 100);
     } else {
       if (masterIndex < designation.length) {
         setWord(designation[masterIndex]);

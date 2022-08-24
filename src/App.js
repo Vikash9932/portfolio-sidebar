@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, lazy } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import Sidebar from './pages/Sidebar/Sidebar';
-import Home from './pages/Home/Home';
-import About from './pages/About/About';
-import Work from './pages/Work/Work';
-import Projects from './pages/Projects/Projects';
-import Contact from './pages/Contact/Contact';
-
 import ContextFile from './context';
+
+const Home = lazy(() => import('./pages/Home/Home'));
+const About = lazy(() => import('./pages/About/About'));
+const Work = lazy(() => import('./pages/Work/Work'));
+const Projects = lazy(() => import('./pages/Projects/Projects'));
+const Contact = lazy(() => import('./pages/Contact/Contact'));
+const Sidebar = lazy(() => import('./pages/Sidebar/Sidebar'));
 
 function App() {
   const [path, setPath] = useState('/');

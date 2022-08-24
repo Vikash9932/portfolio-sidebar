@@ -10,9 +10,21 @@ const Projects = () => {
   const [projects, setProjects] = useState(projectsList);
   const [filter, setFilter] = useState('All');
 
+  const handleFilterSelect = (e) => {
+    let filterVal = e.target.value;
+    setFilter(filterVal);
+    if (filterVal === 'All') {
+      setProjects(projectsList);
+    } else {
+      let tempList = projectsList.filter((item) =>
+        item.techStack.includes(filterVal)
+      );
+      setProjects(tempList);
+    }
+  };
+
   const handleFilter = (e) => {
     let filterVal = e.target.innerText;
-    if (!filterVal) filterVal = e.target.value;
     setFilter(filterVal);
     if (filterVal === 'All') {
       setProjects(projectsList);
@@ -46,7 +58,7 @@ const Projects = () => {
           <select
             className='projects__list__filterHeader1--item'
             value={filter}
-            onChange={handleFilter}>
+            onChange={handleFilterSelect}>
             {projectsFilter.map((item) => (
               <option key={item} value={item}>
                 {item}
