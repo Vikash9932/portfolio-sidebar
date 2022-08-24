@@ -1,4 +1,4 @@
-import React, { useState, lazy } from 'react';
+import React, { useState, lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import ContextFile from './context';
@@ -17,14 +17,16 @@ function App() {
     <div className='app'>
       <ContextFile.Provider value={{ path, setPath, icon, setIcon }}>
         <BrowserRouter>
-          <Sidebar />
-          <Routes>
-            <Route exact path='/' element={<Home />} />
-            <Route path='/about' element={<About />} />
-            <Route path='/work' element={<Work />} />
-            <Route path='/projects' element={<Projects />} />
-            <Route path='/contact' element={<Contact />} />
-          </Routes>
+          <Suspense fallback={<div>Loading...</div>}>
+            <Sidebar />
+            <Routes>
+              <Route exact path='/' element={<Home />} />
+              <Route path='/about' element={<About />} />
+              <Route path='/work' element={<Work />} />
+              <Route path='/projects' element={<Projects />} />
+              <Route path='/contact' element={<Contact />} />
+            </Routes>
+          </Suspense>
         </BrowserRouter>
       </ContextFile.Provider>
     </div>
