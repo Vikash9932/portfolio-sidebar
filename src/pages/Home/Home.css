@@ -33,7 +33,7 @@
 @media screen and (max-width: 800px) {
   .home {
     margin-left: 0px;
-    background-image: url('../../assets/bgMobile.jpg');
+    background-image: url('../../assets/bgMobile.webp');
   }
   .home--name {
     font-size: 3rem;
