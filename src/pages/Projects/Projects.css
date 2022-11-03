@@ -16,10 +16,6 @@
   cursor: pointer;
 }
 
-.projects__list--filterHeader1 {
-  display: none;
-}
-
 .projects__list__filterHeader--item {
   background-color: aquamarine;
   padding: 1rem;
@@ -36,6 +32,18 @@
 }
 
 .projects__list__filterHeader--item:hover {
+  background-color: rgb(101, 205, 170);
+}
+
+.projects__list--filterHeader1 {
+  display: none;
+}
+
+.projects__list__filterHeader1--item {
+  border: 1px solid black;
+  width: 100px;
+  height: 2rem;
+  font-size: 1rem;
   background-color: rgb(101, 205, 170);
 }
 

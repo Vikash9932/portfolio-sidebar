@@ -15,8 +15,16 @@ const Home = () => {
   const [masterIndex, setMasterIndex] = useState(1);
   const [word, setWord] = useState(designation[0]);
   const [splitText, setSplitText] = useState(designation[0].split(''));
+  const [ready, setReady] = useState(false);
 
   useEffect(() => {
+    setTimeout(() => {
+      setReady(true);
+    }, 1000);
+  }, []);
+
+  useEffect(() => {
+    if (!ready) return;
     if (index < word.length) {
       setTimeout(() => {
         setText(text + splitText[index]);
@@ -47,7 +55,7 @@ const Home = () => {
       }
     }
     //eslint-disable-next-line
-  }, [index]);
+  }, [index, ready]);
 
   useEffect(() => {
     setTimeout(() => {
@@ -60,7 +68,7 @@ const Home = () => {
     <div className='home'>
       <div className='home--name'>Vikash Kumar</div>
       <div className='home--designation'>
-        I'm a <span className='home--text'>{text}</span>
+        I'm a {ready && <span className='home--text'>{text}</span>}
         <span className='home--cursor'>{cursor}</span>
       </div>
     </div>
