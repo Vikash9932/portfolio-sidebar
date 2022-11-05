@@ -27,7 +27,7 @@ const SideBarContent = () => {
   }, [location]);
 
   return (
-    <div className='sidebar'>
+    <div className={icon ? 'hide sidebar' : 'sidebar'}>
       <div className='sidebar--image'>
         <img src={Me} alt='Me' />
       </div>
@@ -119,10 +119,10 @@ const Sidebar = () => {
       <div className='sidebar--logo' onClick={() => setIcon(!icon)}>
         {icon && <GiHamburgerMenu color='lightGreen' size='35' />}
       </div>
-      {!icon && <SideBarContent />}
-      <div className='show'>
-        <SideBarContent />
-      </div>
+      {/* {!icon && <SideBarContent />}
+      <div className='show'> */}
+      <SideBarContent />
+      {/* </div> */}
     </>
   );
 };
