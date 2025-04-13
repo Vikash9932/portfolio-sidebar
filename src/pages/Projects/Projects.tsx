@@ -28,18 +28,6 @@ const Projects = () => {
       <h2 className='projects--heading'>Projects</h2>
       <div className='projects__list'>
         <div className='projects__list--filterHeader'>
-          {/* {projectsFilter.map((item) => (
-            <div
-              key={item}
-              className='projects__list__filterHeader--item'
-              value={filter}
-              onClick={(e) => handleFilter(e.target.innerText)}
-              style={{
-                backgroundColor: filter === item ? 'rgb(101, 205, 170)' : '',
-              }}>
-              {item}
-            </div>
-          ))} */}
           {projectsFilter.map((item) => (
             <button
               key={item}
