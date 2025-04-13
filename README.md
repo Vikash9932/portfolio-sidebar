@@ -1,4 +1,4 @@
-## Deployed at: https://portfolio-vikash9932.vercel.app
+## Deployed at: https://vikash9932.github.io/
 
 # Getting Started with Create React App
 
