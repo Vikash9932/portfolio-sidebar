@@ -1,4 +1,4 @@
-export const projectsFilter = [
+export const defaultFilters = [
   'All',
   'React',
   'JavaScript',
