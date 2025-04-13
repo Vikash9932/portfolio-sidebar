@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 
 import Sidebar from './pages/Sidebar/Sidebar';
 import Home from './pages/Home/Home';
@@ -26,16 +26,14 @@ function App() {
   return (
     <div className='app'>
       <ContextFile.Provider value={{ path, setPath, icon, setIcon }}>
-        <BrowserRouter>
-          <Sidebar />
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/about' element={<About />} />
-            <Route path='/work' element={<Work />} />
-            <Route path='/projects' element={<Projects />} />
-            <Route path='/contact' element={<Contact />} />
-          </Routes>
-        </BrowserRouter>
+        <Sidebar />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/work' element={<Work />} />
+          <Route path='/projects' element={<Projects />} />
+          <Route path='/contact' element={<Contact />} />
+        </Routes>
       </ContextFile.Provider>
     </div>
   );
