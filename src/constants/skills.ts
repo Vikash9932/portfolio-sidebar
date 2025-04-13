@@ -1,6 +1,10 @@
 export const skills = [
   {
     name: 'React',
+    progress: 85,
+  },
+  {
+    name: 'TypeScript',
     progress: 80,
   },
   {
@@ -39,8 +43,4 @@ export const skills = [
   //   name: 'HTML5',
   //   progress: 80,
   // },
-  {
-    name: 'Git',
-    progress: 75,
-  },
 ];

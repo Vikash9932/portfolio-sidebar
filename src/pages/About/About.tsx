@@ -26,9 +26,9 @@ const About = () => {
                 {skill.name}
               </div>
             </div>
-            <span className='about__skills__all__each--progress'>
+            {/* <span className='about__skills__all__each--progress'>
               {skill.progress}%
-            </span>
+            </span> */}
           </div>
         ))}
       </div>
