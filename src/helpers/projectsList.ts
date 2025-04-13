@@ -1,7 +1,7 @@
-import toDo from '../assets/toDoList.jpg';
-import tetris from '../assets/tetrisGame.png';
-import meroPiso from '../assets/meroPiso.png';
-import memoryGame from '../assets/memoryGame.png';
+const toDo = require('../assets/toDoList.jpg');
+const tetrisGame = require('../assets/tetrisGame.png');
+const meroPisoGame = require('../assets/meroPiso.png');
+const memoryGameImg = require('../assets/memoryGame.png');
 
 const projectsList = [
   {
@@ -15,7 +15,7 @@ const projectsList = [
   {
     id: 2,
     name: 'Tetris Game',
-    image: tetris,
+    image: tetrisGame,
     githubLink: 'https://github.com/Vikash9932/tetris-game',
     deployLink: 'https://tetris-game-two.vercel.app',
     techStack: ['JavaScript'],
@@ -23,7 +23,7 @@ const projectsList = [
   {
     id: 3,
     name: 'Finance Tracker',
-    image: meroPiso,
+    image: meroPisoGame,
     githubLink: 'https://github.com/Vikash9932/finance-tracker',
     deployLink: 'https://meropiso.web.app/',
     techStack: ['React', 'Firebase'],
@@ -31,7 +31,7 @@ const projectsList = [
   {
     id: 4,
     name: 'Memory Game',
-    image: memoryGame,
+    image: memoryGameImg,
     githubLink: 'https://github.com/Vikash9932/memory-game',
     deployLink: 'https://memory-game-vikash9932.vercel.app',
     techStack: ['React'],

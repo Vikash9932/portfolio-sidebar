@@ -19,7 +19,7 @@ function App() {
         <BrowserRouter>
           <Sidebar />
           <Routes>
-            <Route exact path='/' element={<Home />} />
+            <Route path='/' element={<Home />} />
             <Route path='/about' element={<About />} />
             <Route path='/work' element={<Work />} />
             <Route path='/projects' element={<Projects />} />

@@ -1,16 +1,17 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { AiFillGithub } from 'react-icons/ai';
 import { BiLinkExternal } from 'react-icons/bi';
 
 import './Projects.css';
-import projectsFilter from '../../assets/projectsFilter';
-import projectsList from '../../assets/projectsList';
+import projectsList from '../../helpers/projectsList';
+
+import { projectsFilter } from '../../constants/projectsFilter';
 
 const Projects = () => {
   const [projects, setProjects] = useState(projectsList);
   const [filter, setFilter] = useState('All');
 
-  const handleFilter = (filterVal) => {
+  const handleFilter = (filterVal: any) => {
     setFilter(filterVal);
     if (filterVal === 'All') {
       setProjects(projectsList);
@@ -24,10 +25,10 @@ const Projects = () => {
 
   return (
     <div className='projects'>
-      <div className='projects--heading'>Projects</div>
+      <h2 className='projects--heading'>Projects</h2>
       <div className='projects__list'>
         <div className='projects__list--filterHeader'>
-          {projectsFilter.map((item) => (
+          {/* {projectsFilter.map((item) => (
             <div
               key={item}
               className='projects__list__filterHeader--item'
@@ -38,6 +39,17 @@ const Projects = () => {
               }}>
               {item}
             </div>
+          ))} */}
+          {projectsFilter.map((item) => (
+            <button
+              key={item}
+              className='projects__list__filterHeader--item'
+              onClick={() => handleFilter(item)}
+              style={{
+                backgroundColor: filter === item ? 'rgb(101, 205, 170)' : '',
+              }}>
+              {item}
+            </button>
           ))}
         </div>
         <div className='projects__list--filterHeader1'>

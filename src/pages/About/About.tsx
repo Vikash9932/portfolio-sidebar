@@ -1,7 +1,7 @@
-import React from 'react';
 import './About.css';
-import skills from '../../assets/skills';
-import certifications from '../../assets/certifications';
+
+import { certifications } from '../../constants/certifications';
+import { skills } from '../../constants/skills';
 
 const About = () => {
   return (

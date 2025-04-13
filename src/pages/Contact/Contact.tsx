@@ -1,4 +1,3 @@
-import React from 'react';
 import { AiOutlineMail } from 'react-icons/ai';
 import { BiPhoneCall } from 'react-icons/bi';
 import { HiOutlineLocationMarker } from 'react-icons/hi';

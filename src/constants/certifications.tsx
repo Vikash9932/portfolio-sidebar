@@ -1,6 +1,6 @@
 import { SiHackerrank, SiFreecodecamp, SiInfosys } from 'react-icons/si';
 
-const certifications = [
+export const certifications = [
   {
     id: 8,
     name: 'JavaScript Algorithms and Data Structures',
@@ -71,5 +71,3 @@ const certifications = [
     logo: <SiInfosys size={45} />,
   },
 ];
-
-export default certifications;

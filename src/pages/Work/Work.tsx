@@ -1,5 +1,3 @@
-import React from 'react';
-
 import './Work.css';
 
 const Work = () => {
@@ -130,7 +128,7 @@ const Work = () => {
               </li>
               <li>
                 Designed page layout using
-                <stromg>HTML, CSS &#32; JavaScript </stromg>and adding dynamic
+                <strong>HTML, CSS &#32; JavaScript </strong>and adding dynamic
                 functionality to each module
               </li>
               <li>Validated input fields in the front end of application</li>

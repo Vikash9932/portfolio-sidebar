@@ -1,4 +1,4 @@
-const skills = [
+export const skills = [
   {
     name: 'React',
     progress: 80,
@@ -44,4 +44,3 @@ const skills = [
     progress: 75,
   },
 ];
-export default skills;

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import { useContext, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import {
   AiOutlineHome,
@@ -12,9 +12,10 @@ import { BsCloudDownload } from 'react-icons/bs';
 import { GiHamburgerMenu } from 'react-icons/gi';
 
 import './Sidebar.css';
-import Me from '../../assets/me.jpg';
-import CV from '../../assets/cv.pdf';
 import ContextFile from '../../context';
+
+const Me = require('../../assets/me.jpg');
+const CV = require('../../assets/cv.pdf');
 
 const SideBarContent = () => {
   const { path, setPath, icon, setIcon } = useContext(ContextFile);
