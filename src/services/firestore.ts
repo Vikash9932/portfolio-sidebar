@@ -1,6 +1,6 @@
 import { collection, getDocs } from 'firebase/firestore';
 import { defaultFilters } from '../constants/projectsFilter';
-import { db } from '../firebase.config';
+import { db } from '../config/firebase.config';
 
 export const getProjectsFilter = async () => {
   try {

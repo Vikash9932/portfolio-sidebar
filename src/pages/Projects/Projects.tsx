@@ -1,30 +1,14 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { AiFillGithub } from 'react-icons/ai';
 import { BiLinkExternal } from 'react-icons/bi';
 import './Projects.css';
 import projectsList from '../../helpers/projectsList';
-import { getProjectsFilter } from '../../services/firestore';
+import { useProjectFilters } from '../../hooks/useProjectFilters';
 
 const Projects = () => {
+  const { filters, isLoading } = useProjectFilters();
   const [projects, setProjects] = useState(projectsList);
   const [filter, setFilter] = useState('All');
-  const [filters, setFilters] = useState<string[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const loadFilters = async () => {
-      try {
-        const fetchedFilters = await getProjectsFilter();
-        setFilters(fetchedFilters);
-      } catch (error) {
-        console.error('Error loading filters:', error);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    loadFilters();
-  }, []);
 
   const handleFilter = (filterVal: string) => {
     setFilter(filterVal);
