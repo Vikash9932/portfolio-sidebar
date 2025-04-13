@@ -2,6 +2,30 @@ import { SiHackerrank, SiFreecodecamp, SiInfosys } from 'react-icons/si';
 
 export const certifications = [
   {
+    id: 11,
+    name: 'React (Basic)',
+    by: 'HackerRank',
+    url: 'https://www.hackerrank.com/certificates/6a6e44d3c05b',
+    date: '08/2023',
+    logo: <SiHackerrank size={45} />,
+  },
+  {
+    id: 10,
+    name: 'JavaScript (Intermediate)',
+    by: 'HackerRank',
+    url: 'https://www.hackerrank.com/certificates/22dcba7dc2d6',
+    date: '08/2023',
+    logo: <SiHackerrank size={45} />,
+  },
+  {
+    id: 9,
+    name: 'Problem Solving (Basic)',
+    by: 'HackerRank',
+    url: 'https://www.hackerrank.com/certificates/fb4ab9bf77c9',
+    date: '08/2023',
+    logo: <SiHackerrank size={45} />,
+  },
+  {
     id: 8,
     name: 'JavaScript Algorithms and Data Structures',
     by: 'freeCodeCamp',
