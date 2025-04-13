@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
 
 import Sidebar from './pages/Sidebar/Sidebar';
 import Home from './pages/Home/Home';
@@ -13,6 +13,16 @@ import ContextFile from './context';
 function App() {
   const [path, setPath] = useState('/');
   const [icon, setIcon] = useState(true);
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const path = new URLSearchParams(window.location.search).get('path');
+    if (path) {
+      navigate(path);
+    }
+  }, [navigate]);
+
   return (
     <div className='app'>
       <ContextFile.Provider value={{ path, setPath, icon, setIcon }}>
